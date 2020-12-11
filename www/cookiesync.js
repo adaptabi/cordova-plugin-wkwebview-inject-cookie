@@ -23,7 +23,7 @@ module.exports = {
       url = url.slice(url.indexOf("\/\/")+2);
     }
     var sPos = url.indexOf("\/");
-    var domain = url.substr(0,sPos);
+    var domain = url.substr(0,sPos) +"\/";
     var path = url.substr(sPos,(url.length-sPos));
 
     exec(successCallback, errorCallback, "WKWebViewInjectCookie",
