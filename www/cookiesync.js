@@ -24,7 +24,7 @@ module.exports = {
     }
     var sPos = url.indexOf("\/");
     var domain = url.substr(0,sPos) +"\/";
-    var path = url.substr(sPos,(url.length-sPos));
+    var path = url.substr(sPos + 1,(url.length-sPos));
 
     exec(successCallback, errorCallback, "WKWebViewInjectCookie",
       "setCookie", [domain, path, name ? name : "foo", value ? value : "bar"]);
